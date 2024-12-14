@@ -21,26 +21,3 @@ const countdown = () => {
 };
 
 setInterval(countdown, 1000);
-
-// Botón flotante para volver al inicio
-const scrollToTopButton = document.getElementById("scrollToTop");
-
-// Mostrar el botón cuando se desplaza hacia abajo
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollToTopButton.classList.add("show");
-    scrollToTopButton.classList.remove("hide");
-  } else {
-    scrollToTopButton.classList.add("hide");
-    scrollToTopButton.classList.remove("show");
-  }
-});
-
-// Volver al inicio al hacer clic
-scrollToTopButton.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
-
