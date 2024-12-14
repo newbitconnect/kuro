@@ -1,0 +1,119 @@
+/* General */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #0e0c1c;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  background: #1b1730;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e4a73b;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('background-image.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #e4a73b;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.btn-primary {
+  background: #e4a73b;
+  color: #0e0c1c;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #c59130;
+}
+
+/* Temporizador */
+.timer-section {
+  padding: 2rem 0;
+  text-align: center;
+  background: #1b1730;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.time-box {
+  background: #292340;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #e4a73b;
+}
+
+.time-box p {
+  margin: 0.5rem 0 0;
+}
+
+/* About Section */
+.about {
+  padding: 2rem;
+  background: #292340;
+  text-align: center;
+}
+
+.about h2 {
+  color: #e4a73b;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #1b1730;
+  color: #ffffff;
+}
