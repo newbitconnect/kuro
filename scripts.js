@@ -22,42 +22,25 @@ const countdown = () => {
 
 setInterval(countdown, 1000);
 
-/* Botón flotante */
-.floating-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: #e4a73b;
-  color: #0e0c1c;
-  border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-  z-index: 1000;
-}
+// Botón flotante para volver al inicio
+const scrollToTopButton = document.getElementById("scrollToTop");
 
-.floating-button:hover {
-  background-color: #c59130;
-}
+// Mostrar el botón cuando se desplaza hacia abajo
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollToTopButton.classList.add("show");
+    scrollToTopButton.classList.remove("hide");
+  } else {
+    scrollToTopButton.classList.add("hide");
+    scrollToTopButton.classList.remove("show");
+  }
+});
 
-.floating-button.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.floating-button.hide {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-}
+// Volver al inicio al hacer clic
+scrollToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
