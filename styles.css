@@ -145,4 +145,25 @@ a {
   background: #1b1730;
   color: #ffffff;
 }
+/* Botón de traducción */
+.translate-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: #e4a73b;
+  color: #0e0c1c;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.translate-btn:hover {
+  background: #c59130;
+  transform: scale(1.05);
+}
 
