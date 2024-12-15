@@ -21,3 +21,45 @@ const countdown = () => {
 };
 
 setInterval(countdown, 1000);
+
+const translateButton = document.getElementById("translate-button");
+const elementsToTranslate = document.querySelectorAll("[data-translate]");
+
+// Textos en ambos idiomas
+const translations = {
+  en: {
+    inicio: "Home",
+    "sobre-kuro": "About Kuro",
+    episodios: "Episodes",
+    token: "KURO Token",
+    ecosistema: "Ecosystem",
+    participar: "How to Participate",
+    comunidad: "Community",
+    contacto: "Contact",
+  },
+  es: {
+    inicio: "Inicio",
+    "sobre-kuro": "Sobre Kuro",
+    episodios: "Episodios",
+    token: "Token KURO",
+    ecosistema: "Ecosistema",
+    participar: "Cómo Participar",
+    comunidad: "Comunidad",
+    contacto: "Contacto",
+  },
+};
+
+// Estado inicial
+let currentLanguage = "es";
+
+// Cambiar idioma al hacer clic
+translateButton.addEventListener("click", () => {
+  currentLanguage = currentLanguage === "es" ? "en" : "es";
+  translateButton.textContent = currentLanguage.toUpperCase();
+
+  // Cambiar texto en los elementos traducibles
+  elementsToTranslate.forEach((element) => {
+    const key = element.getAttribute("data-translate");
+    element.textContent = translations[currentLanguage][key];
+  });
+});
